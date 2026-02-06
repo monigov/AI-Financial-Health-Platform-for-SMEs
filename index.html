@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Financial Health Platform</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<header>
+<h1>💰 SME Financial Health AI Platform</h1>
+<button onclick="toggleLang()">🌐 हिंदी / English</button>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>Enter Financial Data</h2>
+<input id="revenue" placeholder="Monthly Revenue">
+<input id="expenses" placeholder="Monthly Expenses">
+<input id="loans" placeholder="Total Loan Amount">
+<input id="receivables" placeholder="Accounts Receivable">
+<input id="inventory" placeholder="Inventory Value">
+<select id="industry">
+<option>Retail</option>
+<option>Manufacturing</option>
+<option>Agriculture</option>
+<option>Services</option>
+<option>E-commerce</option>
+</select>
+<button onclick="analyze()">Run AI Analysis</button>
+</div>
+
+<div class="card">
+<h2 id="scoreTitle">Financial Health Score</h2>
+<h1 id="score">--</h1>
+<p id="risk"></p>
+</div>
+
+<div class="card">
+<canvas id="chart"></canvas>
+</div>
+
+<div class="card">
+<h2 id="recTitle">AI Recommendations</h2>
+<ul id="recommendations"></ul>
+</div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
